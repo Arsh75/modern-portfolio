@@ -1,0 +1,188 @@
+.whatIDO {
+  width: var(--cWidth);
+  max-width: var(--cMaxWidth);
+  margin: auto;
+  position: relative;
+  min-height: 80vh;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.what-box {
+  width: calc(33.33% - 15px);
+  min-height: 400px;
+  position: relative;
+  display: flex;
+  margin-bottom: 20px;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+.what-box:hover {
+  opacity: 1;
+}
+
+.what-box-in {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+  box-sizing: border-box;
+  display: none;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(5px);
+  transition: background 0.3s ease;
+}
+
+.what-box:hover .what-box-in {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.what-box-in:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+  box-sizing: border-box;
+  z-index: 0;
+}
+
+.what-box:hover .what-box-in:after {
+  border: 1px dashed var(--accentColor);
+  animation: borderRotate 10s linear infinite;
+}
+
+.what-content {
+  position: relative;
+  z-index: 10;
+}
+
+.what-content span {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--accentColor);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.what-content h2 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.what-content p {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.tech-tag {
+  font-size: 12px !important;
+  color: rgba(255, 255, 255, 0.8) !important;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 6px 12px;
+  border-radius: 4px;
+  letter-spacing: 1px !important;
+  transition: background 0.3s ease;
+}
+
+.what-box:hover .tech-tag {
+  background: rgba(94, 234, 212, 0.2);
+  color: var(--accentColor) !important;
+}
+
+.what-content-c div {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: #fff;
+  z-index: 20;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.what-box:hover .what-content-c div {
+  background-color: var(--accentColor);
+  transform: scale(1.5);
+}
+
+.what-cube-1 {
+  top: -4px;
+  left: -4px;
+}
+
+.what-cube-2 {
+  top: -4px;
+  right: -4px;
+}
+
+.what-cube-3 {
+  bottom: -4px;
+  left: -4px;
+}
+
+.what-cube-4 {
+  bottom: -4px;
+  right: -4px;
+}
+
+.what-border1,
+.what-border2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.what-box:hover .what-border1 {
+  border: 1px solid var(--accentColor);
+  opacity: 1;
+  transform: scale(1.02);
+  transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.what-box:hover .what-border2 {
+  border: 1px solid rgba(94, 234, 212, 0.5);
+  opacity: 1;
+  transform: scale(1.04);
+  filter: blur(4px);
+  transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+@media screen and (max-width: 1024px) {
+  .what-box {
+    width: calc(50% - 10px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .what-box {
+    width: 100%;
+  }
+  
+  .what-content h2 {
+    font-size: 24px;
+  }
+}

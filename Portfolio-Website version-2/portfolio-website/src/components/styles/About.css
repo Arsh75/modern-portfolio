@@ -1,0 +1,46 @@
+.about-section {
+  width: var(--cWidth);
+  max-width: var(--cMaxWidth);
+  margin: auto;
+  position: relative;
+  min-height: 80vh;
+  padding-top: 100px;
+}
+
+.about-in {
+  position: relative;
+  max-width: 900px;
+  margin-top: 10vh;
+  margin-left: 20px;
+}
+
+.about-in-info h2 {
+  font-size: clamp(30px, 4vw, 50px);
+  font-weight: 500;
+  margin-bottom: 30px;
+  color: var(--accentColor);
+}
+
+.about-section p {
+  font-size: clamp(20px, 2.5vw, 36px);
+  line-height: 1.4;
+  margin-bottom: 40px;
+  font-weight: 300;
+  color: rgba(255,255,255,0.9);
+}
+
+.about-btn-wrap p {
+  font-size: clamp(16px, 1.8vw, 22px);
+  color: rgba(255,255,255,0.6);
+  max-width: 800px;
+}
+
+.about-btn-wrap {
+  margin-top: 50px;
+}
+
+@media screen and (max-width: 768px) {
+  .about-in {
+    margin-left: 0;
+  }
+}
